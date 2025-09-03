@@ -1,0 +1,15 @@
+---
+:secret_word: provide
+:incorrect_guesses:
+- - a
+  - l
+  - m
+- - 3
+:matches:
+- p
+- r
+- o
+- _
+- _
+- d
+- e
