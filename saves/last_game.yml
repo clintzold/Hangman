@@ -1,15 +1,15 @@
 ---
-:secret_word: provide
+:secret_word: belize
 :incorrect_guesses:
 - - a
-  - l
-  - m
-- - 3
+  - d
+  - p
+  - f
+- - 2
 :matches:
-- p
-- r
-- o
+- _
+- e
+- l
 - _
 - _
-- d
 - e

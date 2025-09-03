@@ -2,24 +2,23 @@ module PlayGame
 
   def welcome
 
-    puts "\n\nWelcome to HANGMAN!\n"
+    puts "██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
+███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
+██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
+██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝\n\n\n"
 
   end
 
   def get_word
 
     array = []
-
     File.foreach('./lib/dictionary.txt') do |word|
-      
       if word.length < 12 && word.length > 5
-
         array << word.chomp.downcase
-
       end
-
     end
-    
     return array.sample
  
   end
@@ -28,21 +27,13 @@ module PlayGame
   def game_type
    
     puts "Start a (N)ew Game or (L)oad a previous session?"
-    
     loop do
-    
       type = gets.chomp.upcase
-      
       if type == 'N' || type == 'L'
-      
         return type
-      
       else 
-      
         puts "\nInvalid choice. Select (N)ew Game or (L)oad previous session"
-      
       end
-    
     end
   
   end
@@ -50,7 +41,6 @@ module PlayGame
   def guess_or_save
   
     puts "\nEnter a letter to make a guess, or (1) to Save Game"
-
     loop do
       choice = gets.chomp.downcase
       if choice.length > 1

@@ -34,23 +34,20 @@ class Game
      
       })
     end
-  
+    puts "Game was saved. See you next time!"
+
   end
 
   #Checks for match, populates match array or incorrect array accordingly. Also decrements guesses left
   def try_letter(choice)
 
     if self.secret_word.any? {|letter| letter == choice}
-
       self.secret_word.each_with_index do |letter, index|
         self.matches[index] = letter if letter == choice
       end
-    
     else 
-    
       self.incorrect_guesses[0] << choice
       self.incorrect_guesses[1][0] -= 1
-    
     end
 
   end
